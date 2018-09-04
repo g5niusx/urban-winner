@@ -54,7 +54,7 @@ def get_config(project_url):
         a_href_ = file.a['href']
         if a_href_.endswith('.properties') | a_href_.endswith('.yml'):
             _url = get_raw_data(home_url + a_href_)
-            if _url not in has_insert:
+            if (_url,) not in has_insert:
                 handler_db_handler.insert(_url)
     # 获取目录
     for directory in beautiful_soup.find_all('div',

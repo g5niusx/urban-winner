@@ -1,8 +1,8 @@
 import sqlite3
 
 
+# 数据库操作
 class DBHandler(object):
-    db_name = 'url.db'
 
     def __init__(self, db_name):
         self.db_name = db_name
